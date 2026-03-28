@@ -1,0 +1,27 @@
+- description: "resources: <a href=\"https://www.codechef.com/learn/course/c\">coding\
+    \ practice</a><br>\r\nleft at lecture 2 (4:10 min)\r\n<br><br>\r\nnew line added"
+  iframe: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=Opst4dbfDQZC-so3&amp;list=PLUQpHm_JtukKo2fvS9d8hqc7n1dgAyXBN"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+  name: C Programming - IITM
+- iframe: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=j5vGot_7CmSbxrgo&amp;list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+  name: Topology by Dr Tadashi Tokieda
+- iframe: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=QA-dJ8BSqyWGjpss&amp;list=PLpXfHEl2fzl6JWpKGs4w2X2laduGk9xY3"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+  name: MIT human brain course
+- iframe: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=dkD_gWzBXBrZWkgG&amp;list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+  name: ML specialisation
+- iframe: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=aJ5Jhkar5UEywJf0&amp;list=PLHfTPxnG4fWq1Wa1vAt8NXnsr9pGmGvQ3"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+  name: Self-defense
