@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ name }}{% endblock %}
+{% block content %}
+<a href="/">Back to Home</a>
+<h1>{{ name }}</h1>
+<hr>
+<div align="center">
+{{ iframe | safe }}
+<hr>
+<div id="desc_display">
+    <h2>Description:</h2>
+    <p>{{ desc | safe if desc else "No description yet." }}</p>
+</div>
+<br>
+<form method="post" action="/edit_desc">
+    <input type="hidden" name="yaml_file" value="{{ yaml_file }}">
+    <input type="hidden" name="name" value="{{ name }}">
+    <input type="hidden" name="safe_name" value="{{ safe_name }}">
+    <input type="hidden" name="section" value="{{ section }}">
+    <textarea name="description" rows="5" cols="100"></textarea>
+    <br><br>
+    <input type="submit" value="{{ 'Update Description' if desc else 'Save Description' }}"
+           style="box-sizing: border-box; padding: 10px; line-height: 1.2;" />
+</form>
+</div>
+<hr>
+{% endblock %}
