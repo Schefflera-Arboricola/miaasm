@@ -5,8 +5,14 @@ from flask import Flask, render_template, request, redirect, url_for, abort
 
 app = Flask(__name__)
 
+
+@app.context_processor
+def inject_globals():
+    return {"BG_COLOR": BG_COLOR, "SCALE": SCALE}
+
 CONTENT = os.path.join(os.path.dirname(__file__), "content")
 SCALE = 2.0
+BG_COLOR = "#e8d9b7"
 
 
 def load_sections():

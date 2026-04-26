@@ -20,8 +20,8 @@
         Note: Youtube still recommends videos in embedded form-- pair it with [the "why" pop-up extension](https://github.com/Schefflera-Arboricola/the-why-pop-up) for better experience.
         
         - `description` - if you want some text to appear under your content on the webpage.
-    - [optional] Update [`build.py`](build.py): you can edit `SCALE` to modify the size of the embedded content, and `BG_COLOR` to change the background color(use https://encycolorpedia.com/ to get the hexadecimal color code) of the website.
-- Launch your site: `sh script.sh` . Wait 3-5 seconds -- your site opens automatically at `localhost:8000`
+    - [optional] Update [`app.py`](app.py): you can edit `SCALE` to modify the size of the embedded content, and `BG_COLOR` to change the background color (use https://encycolorpedia.com/ to get the hexadecimal color code) of the website.
+- Launch your site: `python3 app.py`. Then open `http://127.0.0.1:5000` in your browser
 - Press `Ctrl+C` in Terminal to stop hosting
 
 ## Features and Functionalities
