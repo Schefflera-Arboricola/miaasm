@@ -1,6 +1,7 @@
 import os
+import re
 import yaml
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 
 app = Flask(__name__)
 
@@ -79,14 +80,26 @@ def edit_desc():
     section = request.form["section"]
     new_desc = request.form["description"].strip()
 
+    # Validate yaml_file is a bare filename with no path components
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+\.ya?ml", yaml_file):
+        abort(400, "Invalid yaml_file parameter")
+
     content_path = os.path.join(CONTENT, yaml_file)
+    if not os.path.isfile(content_path):
+        abort(404, "Content file not found")
+
     with open(content_path, "r") as f:
         items = yaml.safe_load(f) or []
 
+    matched = False
     for item in items:
         if item["name"] == name:
             item["description"] = new_desc
+            matched = True
             break
+
+    if not matched:
+        abort(404, "Item not found")
 
     with open(content_path, "w") as f:
         yaml.safe_dump(items, f, default_flow_style=False, allow_unicode=True)
@@ -95,4 +108,5 @@ def edit_desc():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug = os.environ.get("FLASK_DEBUG", "0") == "1"
+    app.run(debug=debug)
