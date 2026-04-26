@@ -115,4 +115,4 @@ def edit_desc():
 
 if __name__ == "__main__":
     debug = os.environ.get("FLASK_DEBUG", "0") == "1"
-    app.run(debug=debug)
+    app.run(host="0.0.0.0", port=8000, debug=debug)
