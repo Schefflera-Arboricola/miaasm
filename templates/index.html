@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
+<style>
+    .section-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
 <h1>All Content</h1><hr>
 {% for section_name, items in sections %}
-<h2>{{ section_name }}</h2>
-<ul>
-{% for item in items %}
-<li><a href="/{{ item.section }}/{{ item.safe_name }}">{{ item.name }}</a></li>
-{% endfor %}
-</ul>
+<details><summary class="section-title">{{ section_name }}</summary>
+    <ul>
+    {% for item in items %}
+    <li><a href="/{{ item.section }}/{{ item.safe_name }}">{{ item.name }}</a></li>
+    {% endfor %}
+    </ul>
+</details>
 <hr>
 {% endfor %}
 {% endblock %}
